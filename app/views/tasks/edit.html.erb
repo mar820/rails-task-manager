@@ -1,0 +1,15 @@
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% if @task.completed == true %>
+      <li><input type="checkbox" checked> Completed</li>
+    <% else %>
+      <li><input type="checkbox"> Completed</li>
+  <% end %>
+</ul>
